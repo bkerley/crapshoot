@@ -1,0 +1,39 @@
+grammar CrapshootScanner
+  rule expression
+    unary_expression /
+    binary_expression
+  end
+
+  rule binary_expression
+    unary_expression (ows arith ows unary_expression)+
+  end
+
+  rule unary_expression
+    series / constant
+  end
+
+  rule series
+    number 'd' number
+  end
+
+  rule number
+    [\d]+
+  end
+
+  rule drop
+    'v' / '^'
+  end
+
+  rule constant
+    number
+  end
+
+  rule arith
+    '+' / '-' / '*' / '/'
+  end
+
+  rule ows
+    # optional whitespace
+    [\s]*
+  end
+end
