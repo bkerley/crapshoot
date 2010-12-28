@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Bryce Kerley"]
-  s.date = %q{2010-12-27}
-  s.description = %q{TODO: longer description of your gem}
+  s.date = %q{2010-12-28}
+  s.description = %q{Crapshoot is a dice-rolling gem that parses complicated notation for most of your pen-and-paper gaming needs.}
   s.email = %q{bkerley@brycekerley.net}
   s.extra_rdoc_files = [
     "LICENSE.txt",
@@ -19,13 +19,26 @@ Gem::Specification.new do |s|
   s.files = [
     ".document",
     "Gemfile",
+    "Gemfile.lock",
+    "Guardfile",
     "LICENSE.txt",
     "README.rdoc",
     "Rakefile",
     "VERSION",
+    "crapshoot.gemspec",
     "lib/crapshoot.rb",
+    "lib/crapshoot/parser/scan.rb",
+    "lib/crapshoot/parser/scan.rl",
+    "lib/crapshoot/postfixer.rb",
+    "lib/crapshoot/scanner.rb",
+    "lib/crapshoot/tokens/arithmetic.rb",
+    "lib/crapshoot/tokens/base.rb",
+    "lib/crapshoot/tokens/constant.rb",
+    "lib/crapshoot/tokens/series.rb",
     "test/helper.rb",
-    "test/test_crapshoot.rb"
+    "test/test_crapshoot.rb",
+    "test/test_postfixer.rb",
+    "test/test_scanner.rb"
   ]
   s.homepage = %q{http://github.com/bkerley/crapshoot}
   s.licenses = ["MIT"]
@@ -35,6 +48,8 @@ Gem::Specification.new do |s|
   s.test_files = [
     "test/helper.rb",
     "test/test_crapshoot.rb",
+    "test/test_evaluator.rb",
+    "test/test_postfixer.rb",
     "test/test_scanner.rb"
   ]
 
@@ -49,6 +64,7 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<rcov>, [">= 0"])
       s.add_development_dependency(%q<guard-test>, ["~> 0.1.4"])
       s.add_development_dependency(%q<treetop>, ["~> 1.4.9"])
+      s.add_runtime_dependency(%q<activesupport>, ["~> 3.0"])
     else
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
@@ -56,6 +72,7 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<rcov>, [">= 0"])
       s.add_dependency(%q<guard-test>, ["~> 0.1.4"])
       s.add_dependency(%q<treetop>, ["~> 1.4.9"])
+      s.add_dependency(%q<activesupport>, ["~> 3.0"])
     end
   else
     s.add_dependency(%q<shoulda>, [">= 0"])
@@ -64,6 +81,7 @@ Gem::Specification.new do |s|
     s.add_dependency(%q<rcov>, [">= 0"])
     s.add_dependency(%q<guard-test>, ["~> 0.1.4"])
     s.add_dependency(%q<treetop>, ["~> 1.4.9"])
+    s.add_dependency(%q<activesupport>, ["~> 3.0"])
   end
 end
 
