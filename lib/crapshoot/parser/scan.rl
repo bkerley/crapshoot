@@ -12,7 +12,7 @@
     count = @num_stack.pop
     @tokens << Tokens::Series.new(count, sides, drop)
   }
-  action arithmetic { @tokens << Tokens::Arithmetic.new data[p-1].chr }
+  action arithmetic { @tokens << Tokens::Arithmetic.new(data[p-1].chr) }
 
   action drop { @drop_current = data[p-1].chr }
 
@@ -21,9 +21,9 @@
   Constant = Number %constant;
 
   Drop = '^' | 'v' %drop;
-  Series = Number 'd' Number Drop?;
+  Series = Number 'd' Number Drop? %series;
 
-  Arithmetic = '+' | '-';
+  Arithmetic = ('+' | '-') %arithmetic;
 
   UnaryExpression = Series | Constant;
   BinaryExpression = UnaryExpression (space* Arithmetic space* UnaryExpression)+;

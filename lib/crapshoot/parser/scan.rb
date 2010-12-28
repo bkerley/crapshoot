@@ -28,9 +28,9 @@ class << self
 end
 self._scanner_trans_keys = [
 	0, 0, 48, 57, 9, 45, 
-	9, 57, 48, 57, 9, 
-	100, 9, 118, 9, 45, 
-	9, 45, 0
+	9, 57, 9, 57, 48, 
+	57, 9, 100, 9, 118, 
+	9, 45, 9, 45, 0
 ]
 
 class << self
@@ -38,8 +38,8 @@ class << self
 	private :_scanner_key_spans, :_scanner_key_spans=
 end
 self._scanner_key_spans = [
-	0, 10, 37, 49, 10, 92, 110, 37, 
-	37
+	0, 10, 37, 49, 49, 10, 92, 110, 
+	37, 37
 ]
 
 class << self
@@ -47,8 +47,8 @@ class << self
 	private :_scanner_index_offsets, :_scanner_index_offsets=
 end
 self._scanner_index_offsets = [
-	0, 0, 11, 49, 99, 110, 203, 314, 
-	352
+	0, 0, 11, 49, 99, 149, 160, 253, 
+	364, 402
 ]
 
 class << self
@@ -62,49 +62,56 @@ self._scanner_indicies = [
 	1, 1, 1, 1, 1, 1, 1, 1, 
 	1, 1, 2, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 3, 1, 3, 
-	1, 3, 3, 3, 3, 3, 1, 1, 
+	1, 4, 4, 4, 4, 4, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
-	3, 1, 1, 1, 1, 1, 1, 1, 
+	4, 1, 1, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
-	0, 0, 0, 0, 0, 0, 0, 0, 
-	0, 0, 1, 4, 4, 4, 4, 4, 
-	4, 4, 4, 4, 4, 1, 5, 5, 
-	5, 5, 5, 1, 1, 1, 1, 1, 
+	5, 5, 5, 5, 5, 5, 5, 5, 
+	5, 5, 1, 6, 6, 6, 6, 6, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
-	1, 1, 1, 1, 1, 5, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
-	6, 1, 6, 1, 1, 7, 7, 7, 
+	1, 1, 6, 1, 1, 1, 1, 1, 
+	1, 1, 1, 1, 1, 1, 1, 1, 
+	1, 1, 0, 0, 0, 0, 0, 0, 
+	0, 0, 0, 0, 1, 7, 7, 7, 
 	7, 7, 7, 7, 7, 7, 7, 1, 
+	8, 8, 8, 8, 8, 1, 1, 1, 
+	1, 1, 1, 1, 1, 1, 1, 1, 
+	1, 1, 1, 1, 1, 1, 1, 8, 
+	1, 1, 1, 1, 1, 1, 1, 1, 
+	1, 1, 9, 1, 9, 1, 1, 10, 
+	10, 10, 10, 10, 10, 10, 10, 10, 
+	10, 1, 1, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
+	1, 1, 1, 11, 1, 12, 12, 12, 
+	12, 12, 1, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
-	1, 8, 1, 9, 9, 9, 9, 9, 
-	1, 1, 1, 1, 1, 1, 1, 1, 
-	1, 1, 1, 1, 1, 1, 1, 1, 
-	1, 1, 9, 1, 1, 1, 1, 1, 
-	1, 1, 1, 1, 1, 10, 1, 10, 
-	1, 1, 11, 11, 11, 11, 11, 11, 
-	11, 11, 11, 11, 1, 1, 1, 1, 
-	1, 1, 1, 1, 1, 1, 1, 1, 
+	1, 1, 1, 1, 12, 1, 1, 1, 
+	1, 1, 1, 1, 1, 1, 1, 13, 
+	1, 13, 1, 1, 14, 14, 14, 14, 
+	14, 14, 14, 14, 14, 14, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
-	12, 1, 1, 1, 1, 1, 1, 1, 
+	1, 1, 1, 1, 1, 1, 1, 1, 
+	1, 1, 15, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
-	13, 1, 2, 2, 2, 2, 2, 1, 
+	1, 1, 16, 1, 17, 17, 17, 17, 
+	17, 1, 1, 1, 1, 1, 1, 1, 
+	1, 1, 1, 1, 1, 1, 1, 1, 
+	1, 1, 1, 17, 1, 1, 1, 1, 
+	1, 1, 1, 1, 1, 1, 18, 1, 
+	18, 1, 19, 19, 19, 19, 19, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
-	1, 2, 1, 1, 1, 1, 1, 1, 
-	1, 1, 1, 1, 3, 1, 3, 1, 
-	14, 14, 14, 14, 14, 1, 1, 1, 
-	1, 1, 1, 1, 1, 1, 1, 1, 
-	1, 1, 1, 1, 1, 1, 1, 14, 
-	1, 1, 1, 1, 1, 1, 1, 1, 
-	1, 1, 15, 1, 15, 1, 0
+	1, 19, 1, 1, 1, 1, 1, 1, 
+	1, 1, 1, 1, 20, 1, 20, 1, 
+	0
 ]
 
 class << self
@@ -112,8 +119,9 @@ class << self
 	private :_scanner_trans_targs, :_scanner_trans_targs=
 end
 self._scanner_trans_targs = [
-	5, 0, 2, 3, 6, 2, 3, 5, 
-	4, 2, 3, 6, 7, 8, 2, 3
+	6, 0, 2, 3, 4, 6, 4, 7, 
+	2, 3, 6, 5, 2, 3, 7, 8, 
+	9, 2, 3, 2, 3
 ]
 
 class << self
@@ -121,8 +129,9 @@ class << self
 	private :_scanner_trans_actions, :_scanner_trans_actions=
 end
 self._scanner_trans_actions = [
-	1, 0, 0, 0, 1, 2, 2, 0, 
-	3, 3, 3, 0, 3, 3, 4, 4
+	1, 0, 0, 0, 2, 3, 0, 1, 
+	4, 4, 0, 5, 6, 6, 0, 5, 
+	5, 7, 7, 8, 8
 ]
 
 class << self
@@ -130,8 +139,8 @@ class << self
 	private :_scanner_eof_actions, :_scanner_eof_actions=
 end
 self._scanner_eof_actions = [
-	0, 0, 0, 0, 0, 2, 3, 0, 
-	4
+	0, 0, 0, 0, 0, 0, 4, 6, 
+	7, 8
 ]
 
 class << self
@@ -141,7 +150,7 @@ self.scanner_start = 1;
 class << self
 	attr_accessor :scanner_first_final
 end
-self.scanner_first_final = 5;
+self.scanner_first_final = 6;
 class << self
 	attr_accessor :scanner_error
 end
@@ -155,7 +164,7 @@ self.scanner_en_main = 1;
 
 # line 52 "lib/crapshoot/parser/scan.rl"
         
-# line 159 "lib/crapshoot/parser/scan.rb"
+# line 168 "lib/crapshoot/parser/scan.rb"
 begin
 	p ||= 0
 	pe ||= data.length
@@ -164,7 +173,7 @@ end
 
 # line 53 "lib/crapshoot/parser/scan.rl"
         
-# line 168 "lib/crapshoot/parser/scan.rb"
+# line 177 "lib/crapshoot/parser/scan.rb"
 begin
 	testEof = false
 	_slen, _trans, _keys, _inds, _acts, _nacts = nil
@@ -205,17 +214,28 @@ begin
 		begin
  @mark_num = p 		end
 # line 4 "lib/crapshoot/parser/scan.rl"
-	when 3 then
+	when 5 then
 # line 5 "lib/crapshoot/parser/scan.rl"
 		begin
  @num_stack.push atos(data[@mark_num..p-1]) 		end
 # line 5 "lib/crapshoot/parser/scan.rl"
-	when 4 then
-# line 17 "lib/crapshoot/parser/scan.rl"
+	when 7 then
+# line 8 "lib/crapshoot/parser/scan.rl"
 		begin
- @drop_current = data[p-1].chr 		end
-# line 17 "lib/crapshoot/parser/scan.rl"
+
+    drop = @drop_current
+    @drop_current = nil
+    sides = @num_stack.pop
+    count = @num_stack.pop
+    @tokens << Tokens::Series.new(count, sides, drop)
+  		end
+# line 8 "lib/crapshoot/parser/scan.rl"
 	when 2 then
+# line 15 "lib/crapshoot/parser/scan.rl"
+		begin
+ @tokens << Tokens::Arithmetic.new(data[p-1].chr) 		end
+# line 15 "lib/crapshoot/parser/scan.rl"
+	when 4 then
 # line 5 "lib/crapshoot/parser/scan.rl"
 		begin
  @num_stack.push atos(data[@mark_num..p-1]) 		end
@@ -224,7 +244,46 @@ begin
 		begin
  @tokens << Tokens::Constant.new(@num_stack.pop) 		end
 # line 7 "lib/crapshoot/parser/scan.rl"
-# line 228 "lib/crapshoot/parser/scan.rb"
+	when 6 then
+# line 5 "lib/crapshoot/parser/scan.rl"
+		begin
+ @num_stack.push atos(data[@mark_num..p-1]) 		end
+# line 5 "lib/crapshoot/parser/scan.rl"
+# line 8 "lib/crapshoot/parser/scan.rl"
+		begin
+
+    drop = @drop_current
+    @drop_current = nil
+    sides = @num_stack.pop
+    count = @num_stack.pop
+    @tokens << Tokens::Series.new(count, sides, drop)
+  		end
+# line 8 "lib/crapshoot/parser/scan.rl"
+	when 3 then
+# line 15 "lib/crapshoot/parser/scan.rl"
+		begin
+ @tokens << Tokens::Arithmetic.new(data[p-1].chr) 		end
+# line 15 "lib/crapshoot/parser/scan.rl"
+# line 4 "lib/crapshoot/parser/scan.rl"
+		begin
+ @mark_num = p 		end
+# line 4 "lib/crapshoot/parser/scan.rl"
+	when 8 then
+# line 17 "lib/crapshoot/parser/scan.rl"
+		begin
+ @drop_current = data[p-1].chr 		end
+# line 17 "lib/crapshoot/parser/scan.rl"
+# line 8 "lib/crapshoot/parser/scan.rl"
+		begin
+
+    drop = @drop_current
+    @drop_current = nil
+    sides = @num_stack.pop
+    count = @num_stack.pop
+    @tokens << Tokens::Series.new(count, sides, drop)
+  		end
+# line 8 "lib/crapshoot/parser/scan.rl"
+# line 287 "lib/crapshoot/parser/scan.rb"
 	end
 	end
 	end
@@ -242,17 +301,18 @@ begin
 	if _goto_level <= _test_eof
 	if p == eof
 	  case _scanner_eof_actions[cs]
-	when 3 then
-# line 5 "lib/crapshoot/parser/scan.rl"
+	when 7 then
+# line 8 "lib/crapshoot/parser/scan.rl"
 		begin
- @num_stack.push atos(data[@mark_num..p-1]) 		end
-# line 5 "lib/crapshoot/parser/scan.rl"
+
+    drop = @drop_current
+    @drop_current = nil
+    sides = @num_stack.pop
+    count = @num_stack.pop
+    @tokens << Tokens::Series.new(count, sides, drop)
+  		end
+# line 8 "lib/crapshoot/parser/scan.rl"
 	when 4 then
-# line 17 "lib/crapshoot/parser/scan.rl"
-		begin
- @drop_current = data[p-1].chr 		end
-# line 17 "lib/crapshoot/parser/scan.rl"
-	when 2 then
 # line 5 "lib/crapshoot/parser/scan.rl"
 		begin
  @num_stack.push atos(data[@mark_num..p-1]) 		end
@@ -261,7 +321,37 @@ begin
 		begin
  @tokens << Tokens::Constant.new(@num_stack.pop) 		end
 # line 7 "lib/crapshoot/parser/scan.rl"
-# line 265 "lib/crapshoot/parser/scan.rb"
+	when 6 then
+# line 5 "lib/crapshoot/parser/scan.rl"
+		begin
+ @num_stack.push atos(data[@mark_num..p-1]) 		end
+# line 5 "lib/crapshoot/parser/scan.rl"
+# line 8 "lib/crapshoot/parser/scan.rl"
+		begin
+
+    drop = @drop_current
+    @drop_current = nil
+    sides = @num_stack.pop
+    count = @num_stack.pop
+    @tokens << Tokens::Series.new(count, sides, drop)
+  		end
+# line 8 "lib/crapshoot/parser/scan.rl"
+	when 8 then
+# line 17 "lib/crapshoot/parser/scan.rl"
+		begin
+ @drop_current = data[p-1].chr 		end
+# line 17 "lib/crapshoot/parser/scan.rl"
+# line 8 "lib/crapshoot/parser/scan.rl"
+		begin
+
+    drop = @drop_current
+    @drop_current = nil
+    sides = @num_stack.pop
+    count = @num_stack.pop
+    @tokens << Tokens::Series.new(count, sides, drop)
+  		end
+# line 8 "lib/crapshoot/parser/scan.rl"
+# line 355 "lib/crapshoot/parser/scan.rb"
 	  end
 	end
 
