@@ -1,9 +1,12 @@
-require File.join(File.dirname(__FILE__), 'scanner', 'scan.rb')
+require File.join(File.dirname(__FILE__), 'parser', 'scan.rb')
+%w{ base constant series arithmetic }.each do |f|
+  require File.join(File.dirname(__FILE__), 'tokens', f)
+end
 
 module Crapshoot
   class Scanner
     def initialize
-      @parser = CrapshootScannerParser.new
+      @parser = Parser::Scan.new
     end
 
     def parse(line)
@@ -11,7 +14,7 @@ module Crapshoot
       begin
         @result = @parser.parse @line
         return @result
-      rescue e
+      rescue => e
         @exception = e
         return nil
       end
@@ -23,10 +26,13 @@ module Crapshoot
 
     def inspect_errors
       return 'No error' if successful?
-      reason = @parser.failure_reason
-      return 'No error reason' if (reason.nil? || reason.empty?) && (!@exception)
-      return @exception.inspect if @exception
-      return reason
+      backtrace = @exception.backtrace
+      filtered_backtrace = []
+      backtrace.each do |i|
+        break if i.include? __FILE__
+        filtered_backtrace << i
+      end
+      return "#{ @exception.message } at #{ filtered_backtrace.join("\n")}"
     end
   end
 end

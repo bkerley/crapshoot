@@ -36,9 +36,9 @@ end
 task :test => :scanner
 
 desc 'Generate the Ragel scanner'
-task :scanner => 'lib/crapshoot/scanner/scan.rb'
+task :scanner => 'lib/crapshoot/parser/scan.rb'
 
-file 'lib/crapshoot/scanner/scan.rb' => ['lib/crapshoot/scanner/scan.rl'] do |t|
+file 'lib/crapshoot/parser/scan.rb' => ['lib/crapshoot/parser/scan.rl'] do |t|
   sh "ragel -R -F1  -o #{t.name} #{t.prerequisites.first}"
 end
 
@@ -49,7 +49,7 @@ namespace :scanner do
     sh "dot -Tpdf -o #{t.name} #{t.prerequisites.first}"
   end
 
-  file 'doc/scan.dot' => ['lib/crapshoot/scanner/scan.rl', 'doc'] do |t|
+  file 'doc/scan.dot' => ['lib/crapshoot/parser/scan.rl', 'doc'] do |t|
     sh "ragel -Vp -o #{t.name} #{t.prerequisites.first}"
   end
 end
