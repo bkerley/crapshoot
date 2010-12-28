@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{crapshoot}
-  s.version = "0.0.0"
+  s.version = "0.1.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Bryce Kerley"]
@@ -27,6 +27,7 @@ Gem::Specification.new do |s|
     "VERSION",
     "crapshoot.gemspec",
     "lib/crapshoot.rb",
+    "lib/crapshoot/evaluator.rb",
     "lib/crapshoot/parser/scan.rb",
     "lib/crapshoot/parser/scan.rl",
     "lib/crapshoot/postfixer.rb",
@@ -37,6 +38,7 @@ Gem::Specification.new do |s|
     "lib/crapshoot/tokens/series.rb",
     "test/helper.rb",
     "test/test_crapshoot.rb",
+    "test/test_evaluator.rb",
     "test/test_postfixer.rb",
     "test/test_scanner.rb"
   ]
@@ -58,6 +60,14 @@ Gem::Specification.new do |s|
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<crapshoot>, [">= 0"])
+      s.add_runtime_dependency(%q<activesupport>, ["~> 3.0"])
+      s.add_development_dependency(%q<shoulda>, [">= 0"])
+      s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
+      s.add_development_dependency(%q<jeweler>, ["~> 1.5.2"])
+      s.add_development_dependency(%q<rcov>, [">= 0"])
+      s.add_development_dependency(%q<guard-test>, ["~> 0.1.4"])
+      s.add_development_dependency(%q<treetop>, ["~> 1.4.9"])
       s.add_development_dependency(%q<shoulda>, [">= 0"])
       s.add_development_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_development_dependency(%q<jeweler>, ["~> 1.5.2"])
@@ -66,6 +76,14 @@ Gem::Specification.new do |s|
       s.add_development_dependency(%q<treetop>, ["~> 1.4.9"])
       s.add_runtime_dependency(%q<activesupport>, ["~> 3.0"])
     else
+      s.add_dependency(%q<crapshoot>, [">= 0"])
+      s.add_dependency(%q<activesupport>, ["~> 3.0"])
+      s.add_dependency(%q<shoulda>, [">= 0"])
+      s.add_dependency(%q<bundler>, ["~> 1.0.0"])
+      s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
+      s.add_dependency(%q<rcov>, [">= 0"])
+      s.add_dependency(%q<guard-test>, ["~> 0.1.4"])
+      s.add_dependency(%q<treetop>, ["~> 1.4.9"])
       s.add_dependency(%q<shoulda>, [">= 0"])
       s.add_dependency(%q<bundler>, ["~> 1.0.0"])
       s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
@@ -75,6 +93,14 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<activesupport>, ["~> 3.0"])
     end
   else
+    s.add_dependency(%q<crapshoot>, [">= 0"])
+    s.add_dependency(%q<activesupport>, ["~> 3.0"])
+    s.add_dependency(%q<shoulda>, [">= 0"])
+    s.add_dependency(%q<bundler>, ["~> 1.0.0"])
+    s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
+    s.add_dependency(%q<rcov>, [">= 0"])
+    s.add_dependency(%q<guard-test>, ["~> 0.1.4"])
+    s.add_dependency(%q<treetop>, ["~> 1.4.9"])
     s.add_dependency(%q<shoulda>, [">= 0"])
     s.add_dependency(%q<bundler>, ["~> 1.0.0"])
     s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
