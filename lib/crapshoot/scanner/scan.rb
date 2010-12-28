@@ -167,6 +167,7 @@ module CrapshootScanner
     def number2
       elements[2]
     end
+
   end
 
   def _nt_series
@@ -195,6 +196,15 @@ module CrapshootScanner
       if r2
         r3 = _nt_number
         s0 << r3
+        if r3
+          r5 = _nt_drop
+          if r5
+            r4 = r5
+          else
+            r4 = instantiate_node(SyntaxNode,input, index...index)
+          end
+          s0 << r4
+        end
       end
     end
     if s0.last

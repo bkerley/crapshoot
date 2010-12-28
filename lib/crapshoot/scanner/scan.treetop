@@ -13,7 +13,7 @@ grammar CrapshootScanner
   end
 
   rule series
-    number 'd' number
+    number 'd' number drop?
   end
 
   rule number

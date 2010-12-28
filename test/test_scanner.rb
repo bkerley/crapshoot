@@ -6,7 +6,7 @@ class TestScanner < Test::Unit::TestCase
       @scanner.parse(line)
 
       assert @scanner.successful?,
-        "Failed to parse #{line}: #{@scanner.inspect_errors}"
+        "Failed to parse #{line.inspect}: #{@scanner.inspect_errors}"
     end
   end
 

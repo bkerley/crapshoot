@@ -8,8 +8,13 @@ module Crapshoot
 
     def parse(line)
       @line = line
-      @result = @parser.parse @line
-      return @result
+      begin
+        @result = @parser.parse @line
+        return @result
+      rescue e
+        @exception = e
+        return nil
+      end
     end
 
     def successful?
@@ -19,7 +24,8 @@ module Crapshoot
     def inspect_errors
       return 'No error' if successful?
       reason = @parser.failure_reason
-      return 'No error reason' if reason.nil? || reason.empty?
+      return 'No error reason' if (reason.nil? || reason.empty?) && (!@exception)
+      return @exception.inspect if @exception
       return reason
     end
   end
