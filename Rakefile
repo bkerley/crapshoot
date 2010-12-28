@@ -16,7 +16,7 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "http://github.com/bkerley/crapshoot"
   gem.license = "MIT"
   gem.summary = %Q{The alpha and omega of rolling dice}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.description = %Q{Crapshoot is a dice-rolling gem that parses complicated notation for most of your pen-and-paper gaming needs.}
   gem.email = "bkerley@brycekerley.net"
   gem.authors = ["Bryce Kerley"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
@@ -31,6 +31,14 @@ Rake::TestTask.new(:test) do |test|
   test.libs << 'lib' << 'test'
   test.pattern = 'test/**/test_*.rb'
   test.verbose = true
+end
+
+task :test => :scanner
+
+task :scanner => 'lib/crapshoot/scanner/scan.rb'
+
+file 'lib/crapshoot/scanner/scan.rb' => ['lib/crapshoot/scanner/scan.treetop'] do |t|
+  sh "tt #{t.prerequisites.first} -o #{t.name}"
 end
 
 require 'rcov/rcovtask'
