@@ -15,6 +15,10 @@ module Crapshoot
         @result = l.send(@operation.to_sym, r)
         @result
       end
+
+      def inspect
+        "<Crapshoot::Tokens::Arithmetic operation=#{@operation}>"
+      end
     end
   end
 end

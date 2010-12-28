@@ -24,8 +24,14 @@ module Crapshoot
         end
         @description = "(#{roll_description})"
 
-        @result
+        return @result
       end
+
+      def inspect
+        "<Crapshoot::Tokens::Series dice=#{@count}d#{@sides} drop=#{@drop or 'nothing'}>"
+      end
+
+      private
 
       def roll_a_die
         # +1 because we can roll a zero

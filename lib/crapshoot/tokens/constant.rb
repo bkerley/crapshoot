@@ -8,6 +8,10 @@ module Crapshoot
       def eval(stack)
         return @value
       end
+
+      def inspect
+        "<Crapshoot::Tokens::Constant value=#{@value}>"
+      end
     end
   end
 end

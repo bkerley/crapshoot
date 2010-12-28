@@ -7,14 +7,15 @@ module Crapshoot
         step
       end
 
-      raise 'Stack has too many entries' unless @stack.length == 1
+      raise "Stack has too many entries: #{@stack.inspect}" unless @stack.length == 1
 
       return @stack[0]
     end
 
     def step
       candidate = @tokens.shift
-      @stack.push candidate.eval @stack
+      result = candidate.eval @stack
+      @stack.push result
     end
   end
 end
