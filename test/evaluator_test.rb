@@ -35,5 +35,17 @@ class TestEvaluator < Test::Unit::TestCase
     should_evaluate [series3], '>=' => 20, '<=' => 40
     should_evaluate [series4], '=='=>19
     should_evaluate [series5], '=='=>19
+
+    should 'raise an exception when rolling over 50,000 dice' do
+      assert_raises do
+        @evaluator.evaluate [Series.new('50001', '6')]
+      end
+    end
+
+    should 'not raise an exception when rolling exactly 50,000 dice' do
+      assert_nothing_raised do
+        @evaluator.evaluate [Series.new('50000', '6')]
+      end
+    end
   end
 end
