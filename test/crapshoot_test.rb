@@ -20,6 +20,7 @@ class TestCrapshoot < Test::Unit::TestCase
       assert_match matcher, result.description
     end
   end
+
   context 'The Crapshoot module' do
     should_roll '4d6', '>='=>4, '<='=>24
     should_roll '4d6 + 200', '>='=>204, '<='=>224
