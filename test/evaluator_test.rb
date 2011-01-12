@@ -26,8 +26,8 @@ class TestEvaluator < Test::Unit::TestCase
     series1 = Series.new '5', '6', nil
     series2 = Series.new '4', '20', 'v'
     series3 = Series.new '20', '2'
-    series4 = Series.new '20', 1, 'v'
-    series5 = Series.new '20', 1, '^'
+    series4 = Series.new '20', '1', 'v'
+    series5 = Series.new '20', '1', '^'
 
     should_evaluate [five, six, plus], '=='=> 11
     should_evaluate [series1, series1, plus], '>=' => 10, '<=' => 60
