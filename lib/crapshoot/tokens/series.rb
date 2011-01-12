@@ -8,6 +8,7 @@ module Crapshoot
       end
 
       def eval(stack)
+        raise TooManyDiceException.new(@count) if @count > 50_000
         results_array = (1..@count).to_a.map{ roll_a_die }.sort
         @result = results_array.inject(&:+)
         roll_description = results_array.join '+'
@@ -36,6 +37,13 @@ module Crapshoot
       def roll_a_die
         # +1 because we can roll a zero
         ActiveSupport::SecureRandom.random_number(@sides) + 1
+      end
+
+      class TooManyDiceException < RuntimeError
+        def initialize(number_of_dice)
+          @number_of_dice = number_of_dice
+          super "#{@number_of_dice} dice is too many"
+        end
       end
     end
   end
