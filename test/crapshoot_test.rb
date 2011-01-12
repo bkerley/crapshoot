@@ -24,8 +24,11 @@ class TestCrapshoot < Test::Unit::TestCase
   context 'The Crapshoot module' do
     should_roll '4d6', '>='=>4, '<='=>24
     should_roll '4d6 + 200', '>='=>204, '<='=>224
+    should_roll '10-5', '=='=>5
+    should_roll '5-10', '=='=>-5
 
     should_describe '1 + 2', '1+2'
+    should_describe '10 - 5', '10-5'
     should_describe '2d6', /\(\d\+\d\)/
     should_describe '2d6 + 5', /\(\d\+\d\)\+5/
     should_describe '2d6 + 5 + 4d2v', /\(\d\+\d\)\+5\+\(\d\+\d\+\d\+\d\-\d\)/
