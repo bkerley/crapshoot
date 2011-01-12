@@ -17,11 +17,11 @@ module Crapshoot
         when '^'
           max = results_array[0]
           numeric_result -= max
-          roll_description += '-#{max}'
+          roll_description += "-#{max}"
         when 'v'
           min = results_array[-1]
           numeric_result -= min
-          roll_description += '-#{min}'
+          roll_description += "-#{min}"
         end
         @result = Result.new numeric_result
         @result.description = "(#{roll_description})"
