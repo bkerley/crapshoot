@@ -9,25 +9,6 @@ rescue Bundler::BundlerError => e
 end
 require 'rake'
 
-require 'jeweler'
-Jeweler::Tasks.new do |gem|
-  # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "crapshoot"
-  gem.homepage = "http://github.com/bkerley/crapshoot"
-  gem.license = "MIT"
-  gem.summary = %Q{The alpha and omega of rolling dice}
-  gem.description = %Q{Crapshoot is a dice-rolling gem that parses complicated notation for most of your pen-and-paper gaming needs.}
-  gem.email = "bkerley@brycekerley.net"
-  gem.authors = ["Bryce Kerley"]
-  # Include your dependencies below. Runtime dependencies are required when using your gem,
-  # and development dependencies are only needed for development (ie running rake tasks, tests, etc)
-  gem.add_runtime_dependency 'activesupport', '~> 3.0'
-  gem.add_development_dependency 'shoulda', '~> 2.11.3'
-  gem.add_development_dependency 'bundler', '~> 1.0.7'
-  gem.add_development_dependency 'jeweler', '~> 1.5.2'
-end
-Jeweler::RubygemsDotOrgTasks.new
-
 require 'rake/testtask'
 Rake::TestTask.new(:test) do |test|
   test.libs << 'lib' << 'test'
