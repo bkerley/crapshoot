@@ -11,6 +11,9 @@ class TestResult < Test::Unit::TestCase
       assert_respond_to @result, :description=
     end
 
-    should 'behave like an integer'
+    should 'behave like an integer' do
+      assert_equal 11, (@result + 6)
+      assert_equal 1, (@result / 5)
+    end
   end
 end
