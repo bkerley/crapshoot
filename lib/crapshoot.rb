@@ -5,6 +5,10 @@ require 'active_support'
 end
 
 module Crapshoot
+
+  # Rolls dice for the given expression.
+  # @param [String] crapshoot expression to evaluate, such as '4d6v + 8'
+  # @return [Crapshoot::Result] the result of the expression, can be used as a normal Integer
   def self.roll(expression)
     scanner = Scanner.new
     postfixer = Postfixer.new

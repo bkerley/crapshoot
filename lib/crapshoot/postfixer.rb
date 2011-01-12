@@ -1,4 +1,5 @@
 module Crapshoot
+  # Translate the infix-notation tokens into postfix notation to make evaluating them easier.
   class Postfixer
     def postfixify(infix_tokens)
       @infix_orig = infix_tokens

@@ -4,6 +4,7 @@ require File.join(File.dirname(__FILE__), 'parser', 'scan.rb')
 end
 
 module Crapshoot
+  # Turns a string into an array of tokens.
   class Scanner
     def initialize
       @parser = Parser::Scan.new

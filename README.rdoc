@@ -16,6 +16,29 @@ Or you might just want nine:
 
     Crapshoot.roll '9'
 
+== Rolling Dice
+
++Crapshoot.roll+ is the method that rolls dice and returns the result. It takes one argument,
+an expression in the crapshoot language.
+
+[67] a Constant
+[4d4] a Series, rolling four four-sided dice and adding them together
+[4d6v] a Series, rolling four four-sided dice, dropping the lowest one, adding them together
+[17+17] adds two Constants together
+[4d6v - 17] subtracts a Constant from a Series
+[4d20 + 2d100 + 3d6 - 4d4 + 19] adds a whole bunch of dice, subtracts some dice, and adds nineteen
+
+Generally, whitespace is allowed around arithmetic operations, but not inside a series.
+
+== Describing a Roll
+
+The return value from +Crapshoot.roll+ is a Crapshoot::Result object,
+which is an Integer with a description field:
+
+    r = Crapshoot.roll '4d4^ + 6d6 - 10' # => 22
+    r.description # => "(2+2+2+3-3)+(1+3+5+5+6+6)-10"
+    r + 5 # => 27
+
 == Developing with Ragel
 
 I used the "Ragel" state machine compiler to generate the parser for this library. If you're changing the parser, you will need to install Ragel.
@@ -25,7 +48,7 @@ I've had good luck with the macports and homebrew packages for Ragel; I don't an
 If you are modifying the parser, you may want to generate a Graphviz .dot or PDF document of the state machine produced by the scanner. The "rake scanner:pdf" task will generate this PDF, provided your installation of Graphviz allows it. If you're developing on Mac OS X, you can get a PDF-capable copy of Graphviz from http://www.graphviz.org/Download_macos.php .
 
 == Contributing to crapshoot
- 
+
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
 * Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it
 * Fork the project

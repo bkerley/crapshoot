@@ -1,4 +1,5 @@
 module Crapshoot
+  # Stack-based calculator that relies on the "eval" method of tokens.
   class Evaluator
     def evaluate(tokens)
       @stack = []
