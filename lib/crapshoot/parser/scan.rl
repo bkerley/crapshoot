@@ -20,7 +20,7 @@
 
   Constant = Number %constant;
 
-  Drop = '^' | 'v' %drop;
+  Drop = ('^' | 'v') %drop;
   Series = Number 'd' Number Drop? %series;
 
   Arithmetic = ('+' | '-') %arithmetic;
