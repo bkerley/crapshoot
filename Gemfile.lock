@@ -1,3 +1,9 @@
+PATH
+  remote: .
+  specs:
+    crapshoot (0.2.0)
+      activesupport (~> 3.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -24,5 +30,7 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport (~> 3.0)
+  bundler (~> 1.0.7)
+  crapshoot!
   guard-test (~> 0.1.4)
   shoulda (~> 2.11.3)
