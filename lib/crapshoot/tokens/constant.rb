@@ -2,7 +2,8 @@ module Crapshoot
   module Tokens
     class Constant < Base
       def initialize(number)
-        @value = number.to_i
+        @value = Result.new number.to_i
+        @value.description = @value.to_s
       end
 
       def eval(stack)

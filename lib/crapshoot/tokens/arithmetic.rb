@@ -12,8 +12,9 @@ module Crapshoot
       def eval(stack)
         r = stack.pop
         l = stack.pop
-        @result = l.send(@operation.to_sym, r)
-        @result
+        @result = Result.new l.send(@operation.to_sym, r)
+        @result.description = "#{l.description}#{@operation}#{r.description}"
+        return @result
       end
 
       def inspect
