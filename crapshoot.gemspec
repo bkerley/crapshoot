@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{The alpha and omega of rolling dice}
+  s.required_ruby_version = '~> 1.9.2'
 
   s.add_runtime_dependency(%q<activesupport>, ["~> 3.0"])
   s.add_development_dependency(%q<guard-test>, ["~> 0.1.4"])
