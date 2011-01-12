@@ -50,3 +50,8 @@ Rake::RDocTask.new do |rdoc|
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
+
+require 'yard'
+YARD::Rake::YardocTask.new do |t|
+  t.files   = ['lib/**/*.rb', 'README.rdoc']
+end
