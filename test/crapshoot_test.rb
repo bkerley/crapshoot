@@ -29,5 +29,6 @@ class TestCrapshoot < Test::Unit::TestCase
     should_describe '2d6', /\(\d\+\d\)/
     should_describe '2d6 + 5', /\(\d\+\d\)\+5/
     should_describe '2d6 + 5 + 4d2v', /\(\d\+\d\)\+5\+\(\d\+\d\+\d\+\d\-\d\)/
+    should_describe '2d6 + 5 + 4d2^', /\(\d\+\d\)\+5\+\(\d\+\d\+\d\+\d\-\d\)/
   end
 end

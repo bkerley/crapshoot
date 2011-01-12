@@ -31,6 +31,7 @@ class TestScanner < Test::Unit::TestCase
     should_parse '1+2', Constant, Arithmetic, Constant
     should_parse '4d6 + 4d6', Series, Arithmetic, Series
     should_parse '4d6v', Series
+    should_parse '4d6^', Series
     should_parse '4d6 + 2', Series, Arithmetic, Constant
     should_parse '15', Constant
     should_parse '14d100v + 8d8 + 3', Series, Arithmetic, Series, Arithmetic, Constant
