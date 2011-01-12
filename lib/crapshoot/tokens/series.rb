@@ -12,14 +12,13 @@ module Crapshoot
         results_array = (1..@count).to_a.map{ roll_a_die }.sort
         numeric_result = results_array.inject(&:+)
         roll_description = results_array.join '+'
-
         case @drop
         when '^'
-          max = results_array[0]
+          max = results_array.last
           numeric_result -= max
           roll_description += "-#{max}"
         when 'v'
-          min = results_array[-1]
+          min = results_array.first
           numeric_result -= min
           roll_description += "-#{min}"
         end
