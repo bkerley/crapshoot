@@ -6,7 +6,10 @@ class TestResult < Test::Unit::TestCase
       @result = Crapshoot::Result.new 5
     end
 
-    should 'have a description'
+    should 'have a description' do
+      assert_respond_to @result, :description
+      assert_respond_to @result, :description=
+    end
 
     should 'behave like an integer'
   end
