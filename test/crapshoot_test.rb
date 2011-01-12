@@ -1,6 +1,7 @@
 require 'helper'
 
 class TestCrapshoot < Test::Unit::TestCase
+
   def self.should_roll(from, options)
     keys = options.keys
 
@@ -12,8 +13,18 @@ class TestCrapshoot < Test::Unit::TestCase
       end
     end
   end
+
+  def self.should_describe(from, matcher)
+    should "evaluate #{from.inspect} into something resembling #{matcher.inspect}" do
+      result = Crapshoot.roll from
+      assert_match matcher, result.description
+    end
+  end
   context 'The Crapshoot module' do
     should_roll '4d6', '>='=>4, '<='=>24
     should_roll '4d6 + 200', '>='=>204, '<='=>224
+
+    should_describe '1 + 2', '1 + 2'
+    should_describe '2d6', /\(\d\+\d\)/
   end
 end
