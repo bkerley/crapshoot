@@ -23,7 +23,7 @@
   Drop = ('^' | 'v') %drop;
   Series = Number 'd' Number Drop? %series;
 
-  Arithmetic = ('+' | '-') %arithmetic;
+  Arithmetic = ('+' | '-' | '*' | '/') %arithmetic;
 
   UnaryExpression = Series | Constant;
   BinaryExpression = UnaryExpression (space* Arithmetic space* UnaryExpression)+;

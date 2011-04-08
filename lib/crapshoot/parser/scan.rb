@@ -27,10 +27,10 @@ class << self
 	private :_scanner_trans_keys, :_scanner_trans_keys=
 end
 self._scanner_trans_keys = [
-	0, 0, 48, 57, 9, 45, 
+	0, 0, 48, 57, 9, 47, 
 	9, 57, 9, 57, 48, 
 	57, 9, 100, 9, 118, 
-	9, 45, 0
+	9, 47, 0
 ]
 
 class << self
@@ -38,8 +38,8 @@ class << self
 	private :_scanner_key_spans, :_scanner_key_spans=
 end
 self._scanner_key_spans = [
-	0, 10, 37, 49, 49, 10, 92, 110, 
-	37
+	0, 10, 39, 49, 49, 10, 92, 110, 
+	39
 ]
 
 class << self
@@ -47,8 +47,8 @@ class << self
 	private :_scanner_index_offsets, :_scanner_index_offsets=
 end
 self._scanner_index_offsets = [
-	0, 0, 11, 49, 99, 149, 160, 253, 
-	364
+	0, 0, 11, 51, 101, 151, 162, 255, 
+	366
 ]
 
 class << self
@@ -61,52 +61,52 @@ self._scanner_indicies = [
 	1, 1, 1, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
 	1, 1, 2, 1, 1, 1, 1, 1, 
-	1, 1, 1, 1, 1, 3, 1, 3, 
-	1, 4, 4, 4, 4, 4, 1, 1, 
+	1, 1, 1, 1, 3, 3, 1, 3, 
+	1, 3, 1, 4, 4, 4, 4, 4, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
-	4, 1, 1, 1, 1, 1, 1, 1, 
+	1, 1, 4, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
-	5, 5, 5, 5, 5, 5, 5, 5, 
-	5, 5, 1, 6, 6, 6, 6, 6, 
+	1, 1, 5, 5, 5, 5, 5, 5, 
+	5, 5, 5, 5, 1, 6, 6, 6, 
+	6, 6, 1, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
+	1, 1, 1, 1, 6, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
-	1, 1, 6, 1, 1, 1, 1, 1, 
-	1, 1, 1, 1, 1, 1, 1, 1, 
-	1, 1, 0, 0, 0, 0, 0, 0, 
-	0, 0, 0, 0, 1, 7, 7, 7, 
-	7, 7, 7, 7, 7, 7, 7, 1, 
-	8, 8, 8, 8, 8, 1, 1, 1, 
-	1, 1, 1, 1, 1, 1, 1, 1, 
-	1, 1, 1, 1, 1, 1, 1, 8, 
-	1, 1, 1, 1, 1, 1, 1, 1, 
-	1, 1, 9, 1, 9, 1, 1, 10, 
-	10, 10, 10, 10, 10, 10, 10, 10, 
-	10, 1, 1, 1, 1, 1, 1, 1, 
+	1, 1, 1, 1, 0, 0, 0, 0, 
+	0, 0, 0, 0, 0, 0, 1, 7, 
+	7, 7, 7, 7, 7, 7, 7, 7, 
+	7, 1, 8, 8, 8, 8, 8, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
-	1, 1, 1, 1, 1, 1, 1, 1, 
-	1, 1, 1, 1, 1, 1, 1, 1, 
-	1, 1, 1, 11, 1, 12, 12, 12, 
-	12, 12, 1, 1, 1, 1, 1, 1, 
-	1, 1, 1, 1, 1, 1, 1, 1, 
-	1, 1, 1, 1, 12, 1, 1, 1, 
-	1, 1, 1, 1, 1, 1, 1, 13, 
-	1, 13, 1, 1, 14, 14, 14, 14, 
-	14, 14, 14, 14, 14, 14, 1, 1, 
+	1, 8, 1, 1, 1, 1, 1, 1, 
+	1, 1, 1, 9, 9, 1, 9, 1, 
+	9, 10, 10, 10, 10, 10, 10, 10, 
+	10, 10, 10, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
-	1, 1, 15, 1, 1, 1, 1, 1, 
+	1, 1, 1, 1, 1, 11, 1, 12, 
+	12, 12, 12, 12, 1, 1, 1, 1, 
+	1, 1, 1, 1, 1, 1, 1, 1, 
+	1, 1, 1, 1, 1, 1, 12, 1, 
+	1, 1, 1, 1, 1, 1, 1, 1, 
+	13, 13, 1, 13, 1, 13, 14, 14, 
+	14, 14, 14, 14, 14, 14, 14, 14, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
-	1, 1, 15, 1, 16, 16, 16, 16, 
-	16, 1, 1, 1, 1, 1, 1, 1, 
 	1, 1, 1, 1, 1, 1, 1, 1, 
-	1, 1, 1, 16, 1, 1, 1, 1, 
-	1, 1, 1, 1, 1, 1, 17, 1, 
-	17, 1, 0
+	1, 1, 1, 1, 1, 1, 1, 1, 
+	1, 1, 1, 1, 15, 1, 1, 1, 
+	1, 1, 1, 1, 1, 1, 1, 1, 
+	1, 1, 1, 1, 1, 1, 1, 1, 
+	1, 1, 1, 1, 15, 1, 16, 16, 
+	16, 16, 16, 1, 1, 1, 1, 1, 
+	1, 1, 1, 1, 1, 1, 1, 1, 
+	1, 1, 1, 1, 1, 16, 1, 1, 
+	1, 1, 1, 1, 1, 1, 1, 17, 
+	17, 1, 17, 1, 17, 1, 0
 ]
 
 class << self
@@ -208,25 +208,31 @@ begin
 # line 4 "lib/crapshoot/parser/scan.rl"
 		begin
  @mark_num = p 		end
+# line 4 "lib/crapshoot/parser/scan.rl"
 	when 5 then
 # line 5 "lib/crapshoot/parser/scan.rl"
 		begin
  @num_stack.push atos(data[@mark_num..p-1]) 		end
+# line 5 "lib/crapshoot/parser/scan.rl"
 	when 2 then
 # line 15 "lib/crapshoot/parser/scan.rl"
 		begin
  @tokens << Tokens::Arithmetic.new(data[p-1].chr) 		end
+# line 15 "lib/crapshoot/parser/scan.rl"
 	when 4 then
 # line 5 "lib/crapshoot/parser/scan.rl"
 		begin
  @num_stack.push atos(data[@mark_num..p-1]) 		end
+# line 5 "lib/crapshoot/parser/scan.rl"
 # line 7 "lib/crapshoot/parser/scan.rl"
 		begin
  @tokens << Tokens::Constant.new(@num_stack.pop) 		end
+# line 7 "lib/crapshoot/parser/scan.rl"
 	when 6 then
 # line 5 "lib/crapshoot/parser/scan.rl"
 		begin
  @num_stack.push atos(data[@mark_num..p-1]) 		end
+# line 5 "lib/crapshoot/parser/scan.rl"
 # line 8 "lib/crapshoot/parser/scan.rl"
 		begin
 
@@ -236,17 +242,21 @@ begin
     count = @num_stack.pop
     @tokens << Tokens::Series.new(count, sides, drop)
   		end
+# line 8 "lib/crapshoot/parser/scan.rl"
 	when 3 then
 # line 15 "lib/crapshoot/parser/scan.rl"
 		begin
  @tokens << Tokens::Arithmetic.new(data[p-1].chr) 		end
+# line 15 "lib/crapshoot/parser/scan.rl"
 # line 4 "lib/crapshoot/parser/scan.rl"
 		begin
  @mark_num = p 		end
+# line 4 "lib/crapshoot/parser/scan.rl"
 	when 7 then
 # line 17 "lib/crapshoot/parser/scan.rl"
 		begin
  @drop_current = data[p-1].chr 		end
+# line 17 "lib/crapshoot/parser/scan.rl"
 # line 8 "lib/crapshoot/parser/scan.rl"
 		begin
 
@@ -256,7 +266,8 @@ begin
     count = @num_stack.pop
     @tokens << Tokens::Series.new(count, sides, drop)
   		end
-# line 260 "lib/crapshoot/parser/scan.rb"
+# line 8 "lib/crapshoot/parser/scan.rl"
+# line 271 "lib/crapshoot/parser/scan.rb"
 	end
 	end
 	end
@@ -278,13 +289,16 @@ begin
 # line 5 "lib/crapshoot/parser/scan.rl"
 		begin
  @num_stack.push atos(data[@mark_num..p-1]) 		end
+# line 5 "lib/crapshoot/parser/scan.rl"
 # line 7 "lib/crapshoot/parser/scan.rl"
 		begin
  @tokens << Tokens::Constant.new(@num_stack.pop) 		end
+# line 7 "lib/crapshoot/parser/scan.rl"
 	when 6 then
 # line 5 "lib/crapshoot/parser/scan.rl"
 		begin
  @num_stack.push atos(data[@mark_num..p-1]) 		end
+# line 5 "lib/crapshoot/parser/scan.rl"
 # line 8 "lib/crapshoot/parser/scan.rl"
 		begin
 
@@ -294,10 +308,12 @@ begin
     count = @num_stack.pop
     @tokens << Tokens::Series.new(count, sides, drop)
   		end
+# line 8 "lib/crapshoot/parser/scan.rl"
 	when 7 then
 # line 17 "lib/crapshoot/parser/scan.rl"
 		begin
  @drop_current = data[p-1].chr 		end
+# line 17 "lib/crapshoot/parser/scan.rl"
 # line 8 "lib/crapshoot/parser/scan.rl"
 		begin
 
@@ -307,7 +323,8 @@ begin
     count = @num_stack.pop
     @tokens << Tokens::Series.new(count, sides, drop)
   		end
-# line 311 "lib/crapshoot/parser/scan.rb"
+# line 8 "lib/crapshoot/parser/scan.rl"
+# line 328 "lib/crapshoot/parser/scan.rb"
 	  end
 	end
 
