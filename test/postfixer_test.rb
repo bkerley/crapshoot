@@ -14,9 +14,11 @@ class TestPostfixer < Test::Unit::TestCase
     end
 
     five = Constant.new '5'
+    six = Constant.new '6'
+    seven = Constant.new '7'
     plus = Arithmetic.new '+'
     minus = Arithmetic.new '-'
-    six = Constant.new '6'
+    times = Arithmetic.new '*'
     series1 = Series.new '5', '6', nil
     series2 = Series.new '4', '20', 'v'
 
@@ -24,5 +26,7 @@ class TestPostfixer < Test::Unit::TestCase
                       [five, six, plus])
     should_postfixify([series1, plus, six, minus, series2],
                       [series1, six, plus, series2, minus])
+    should_postfixify([five, plus, six, times, seven],
+                      [five, six, seven, times, plus])
   end
 end
