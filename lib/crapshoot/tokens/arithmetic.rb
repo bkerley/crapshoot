@@ -9,6 +9,15 @@ module Crapshoot
         false
       end
 
+      def precedent(stack_top)
+        return true if high_priority? && !stack_top.high_priority?
+        return false
+      end
+
+      def high_priority?
+        @operation == '*' || @operation == '/'
+      end
+
       def eval(stack)
         r = stack.pop
         l = stack.pop
