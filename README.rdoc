@@ -12,9 +12,13 @@ You might otherwise want to roll three twenty-sided dice and drop the highest, a
 
     Crapshoot.roll '3d20^+6'
 
-Or you might just want nine:
+Or you might just want nine divided by three:
 
-    Crapshoot.roll '9'
+    Crapshoot.roll '9 / 3'
+
+Crapshoot supports addition, subtraction, multiplication, and division with correct order of operations:
+
+    Crapshoot.roll '1 + 2 * 3' # returns seven
 
 == Rolling Dice
 

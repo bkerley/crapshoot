@@ -1,6 +1,9 @@
 module Crapshoot
   # Translate the infix-notation tokens into postfix notation to make evaluating them easier.
   class Postfixer
+
+    # Postfixify turns the infix list of tokens from Scanner into a postfix list
+    # by repeatedly calling "step"
     def postfixify(infix_tokens)
       @infix_orig = infix_tokens
       @infix = @infix_orig.dup
@@ -17,6 +20,9 @@ module Crapshoot
       return @postfix
     end
 
+    # step shifts an independent (Constant or Series) token to the
+    # postfix list, or loads a dependent (Arithmetic) token into the
+    # operator_stack for future postfixing.
     def step
       candidate = @infix.shift
       process_independent candidate
