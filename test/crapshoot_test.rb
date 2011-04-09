@@ -32,6 +32,7 @@ class TestCrapshoot < Test::Unit::TestCase
     should_roll '1 + 2 * 3', '=='=>7
     should_roll '4 * 5 + 6', '=='=>26
     should_roll '4 * 5 / 10', '=='=>2
+    should_roll '2 * 3 + 4 * 5 + 10 + 10 * 8 / 2', '=='=>76
 
     should_describe '1 + 2', '1+2'
     should_describe '10 - 5', '10-5'
