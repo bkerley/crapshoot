@@ -1,5 +1,5 @@
 require 'delegate'
-require 'active_support'
+require 'securerandom'
 %w{ result scanner postfixer evaluator }.each do |f|
   require File.join(File.dirname(__FILE__), 'crapshoot', f)
 end

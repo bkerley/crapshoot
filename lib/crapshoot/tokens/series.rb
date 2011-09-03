@@ -36,7 +36,7 @@ module Crapshoot
 
       def roll_a_die
         # +1 because we can roll a zero
-        ActiveSupport::SecureRandom.random_number(@sides) + 1
+        SecureRandom.random_number(@sides) + 1
       end
 
       class TooManyDiceException < RuntimeError
