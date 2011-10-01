@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
   s.summary = %q{The alpha and omega of rolling dice}
   s.required_ruby_version = '~> 1.9.2'
 
+  s.add_development_dependency(%q<rake>, ['~> 0.9.2'])
   s.add_development_dependency(%q<guard-test>, ["~> 0.1.4"])
   s.add_development_dependency(%q<shoulda>, ["~> 2.11.3"])
   s.add_development_dependency(%q<bundler>, ["~> 1.0.7"])
