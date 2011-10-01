@@ -51,6 +51,12 @@ I've had good luck with the macports and homebrew packages for Ragel; I don't an
 
 If you are modifying the parser, you may want to generate a Graphviz .dot or PDF document of the state machine produced by the scanner. The "rake scanner:pdf" task will generate this PDF, provided your installation of Graphviz allows it. If you're developing on Mac OS X, you can get a PDF-capable copy of Graphviz from http://www.graphviz.org/Download_macos.php .
 
+== Compatibility
+
+Crapshoot has been developed and tested with ruby 1.9.2; it works on 1.9.3-rc1, which will be a supported platform once it's released.
+
+Our tests on 1.9.2 and 1.9.3 can be viewed at http://travis-ci.org/bkerley/crapshoot .
+
 == Contributing to crapshoot
 
 * Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet
@@ -63,6 +69,6 @@ If you are modifying the parser, you may want to generate a Graphviz .dot or PDF
 
 == Copyright
 
-Copyright (c) 2010 Bryce Kerley. See LICENSE.txt for
+Copyright (c) 201-2011 Bryce Kerley. See LICENSE.txt for
 further details.
 
