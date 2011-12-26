@@ -15,9 +15,20 @@ class TestCrapshoot < Test::Unit::TestCase
   end
 
   def self.should_describe(from, matcher)
-    should "evaluate #{from.inspect} into something resembling #{matcher.inspect}" do
+    should "describe #{from.inspect} into something resembling #{matcher.inspect}" do
       result = Crapshoot.roll from
       assert_match matcher, result.description
+    end
+  end
+
+  def self.should_array_describe(from, matcher)
+    should "describe #{from.inspect} into a big array resembling #{matcher.inspect}" do
+      result = Crapshoot.roll from
+      result.detailed_description.zip(matcher) do |result_piece, matcher_piece|
+        result_piece.zip(matcher_piece) do |r, m|
+          assert_match m, r
+        end
+      end
     end
   end
 
@@ -40,5 +51,16 @@ class TestCrapshoot < Test::Unit::TestCase
     should_describe '2d6 + 5', /\(\d\+\d\)\+5/
     should_describe '2d6 + 5 + 4d2v', /\(\d\+\d\)\+5\+\(\d\+\d\+\d\+\d\-\d\)/
     should_describe '2d6 + 5 + 4d2^', /\(\d\+\d\)\+5\+\(\d\+\d\+\d\+\d\-\d\)/
+
+    should_array_describe '1 + 2', [['1', '1'], ['+', '+'], ['2', '2']]
+    should_array_describe '10 - 5', [['10', '10'], ['-', '-'], ['5', '5']]
+    should_array_describe '2d6', [['2d6', /\(\d\+\d\)/]]
+    should_array_describe '2d6 + 5', [['2d6', /\(\d\+\d\)/], ['+', '+'], ['5', '5']]
+    should_array_describe '2d6 + 5 + 4d2v', [['2d6', /\(\d\+\d\)/],
+                                             ['+', '+'],
+                                             ['5', '5'],
+                                             ['+', '+'],
+                                             ['4d2v', /\(\d\+\d\+\d\+\d\-\d\)/]]
+
   end
 end
