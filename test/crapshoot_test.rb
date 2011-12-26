@@ -54,13 +54,13 @@ class TestCrapshoot < Test::Unit::TestCase
 
     should_array_describe '1 + 2', [['1', '1'], ['+', '+'], ['2', '2']]
     should_array_describe '10 - 5', [['10', '10'], ['-', '-'], ['5', '5']]
-    should_array_describe '2d6', [['2d6', /\(\d\+\d\)/]]
-    should_array_describe '2d6 + 5', [['2d6', /\(\d\+\d\)/], ['+', '+'], ['5', '5']]
-    should_array_describe '2d6 + 5 + 4d2v', [['2d6', /\(\d\+\d\)/],
+    should_array_describe '2d6', [['2d6', /\d\+\d/]]
+    should_array_describe '2d6 + 5', [['2d6', /\d\+\d/], ['+', '+'], ['5', '5']]
+    should_array_describe '2d6 + 5 + 4d2v', [['2d6', /\d\+\d/],
                                              ['+', '+'],
                                              ['5', '5'],
                                              ['+', '+'],
-                                             ['4d2v', /\(\d\+\d\+\d\+\d\-\d\)/]]
+                                             ['4d2v', /\d\+\d\+\d\+\d\-\d/]]
 
   end
 end
