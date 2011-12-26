@@ -4,6 +4,7 @@ module Crapshoot
       def initialize(number)
         @value = Result.new number.to_i
         @value.description = @value.to_s
+        @value.detailed_description = [[@value.to_s, @value.to_s]]
       end
 
       def eval(stack)

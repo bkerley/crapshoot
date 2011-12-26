@@ -24,6 +24,7 @@ module Crapshoot
         end
         @result = Result.new numeric_result
         @result.description = "(#{roll_description})"
+        @result.detailed_description = [["#{@count}d#{@sides}#{@drop}", roll_description]]
 
         return @result
       end

@@ -23,6 +23,7 @@ module Crapshoot
         l = stack.pop
         @result = Result.new l.send(@operation.to_sym, r)
         @result.description = "#{l.description}#{@operation}#{r.description}"
+        @result.detailed_description = l.detailed_description + [[@operation, @operation]] + r.detailed_description
         return @result
       end
 
