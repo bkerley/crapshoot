@@ -10,5 +10,8 @@ module Crapshoot
 
     # The derivation of the result, as a String.
     attr_accessor :description
+
+    # The derivation of the result, broken down by tokens, as an Array.
+    attr_accessor :detailed_description
   end
 end
