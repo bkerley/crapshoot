@@ -25,6 +25,6 @@ Gem::Specification.new do |s|
   s.add_development_dependency(%q<rake>, ['~> 0.9.2'])
   s.add_development_dependency(%q<guard-test>, ["~> 0.1.4"])
   s.add_development_dependency(%q<shoulda>, ["~> 2.11.3"])
-  s.add_development_dependency(%q<bundler>, ["~> 1.0.7"])
+  s.add_development_dependency(%q<bundler>, ["~> 1.0"])
 end
 
